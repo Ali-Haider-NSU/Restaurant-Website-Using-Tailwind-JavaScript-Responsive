@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurantly</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="CSS/main.css">
+    <!-- Font Awesome Icon link -->
+    <script src="https://kit.fontawesome.com/ea4016ff0f.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav class="bg-black py-14">
+        <div>
+            <div class="flex items-center gap-x-2 justify-center">
+                <i class="fa-solid fa-mobile-screen-button text-orange"></i>
+                <p class="text-white">+15 58955 48455</p>
+            </div>
+            <div class="flex items-center gap-x-2 hidden">
+                <i class="fa-regular fa-clock text-orange"></i>
+                <p class="text-white">Mon-Sat: 11:00 AM - 23:00 PM</p>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 px-5 pt-5">
+            <div class="">
+                <h1 class="font-dancing text-white text-4xl tracking-wide">Deli<span class="text-orange">cious</span></h1>
+            </div>
+            <div class="relative ">
+                <div class="h-9 w-32 bg-orange text-white rounded-full flex justify-center items-center hidden lg:block absolute right-0 ">
+                    <button class="bg-red-600 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">Book a table</button>
+                </div>
+                <div class="absolute right-0 top-1/2 transform -translate-y-1/2 lg:hidden">
+                    <div class="cursor-pointer">
+                        <i class="fa-solid fa-bars text-white text-3xl"></i>
+                    </div>
+                    <div class="hidden cursor-pointer">
+                        <i class="fa-solid fa-xmark text-white text-3xl"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-2 pt-3 hidden">
+                <ul class="bg-white py-7 rounded-xl leading-10 text-lg">
+                    <li class="hover:bg-gray-200 text-orange cursor-pointer px-7">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="hover:bg-gray-200 hover:text-orange cursor-pointer px-7">
+                        <a href="#">Menu</a>
+                    </li>
+                    <li class="hover:bg-gray-200 hover:text-orange cursor-pointer px-7">
+                        <a href="#">Special</a>
+                    </li>
+                    <li class="hover:bg-gray-200 hover:text-orange cursor-pointer px-7">
+                        <a href="#">Chefs</a>
+                    </li>
+                    <li class="hover:bg-gray-200 hover:text-orange cursor-pointer px-7">
+                        <a href="#">Events</a>
+                    </li>
+                    <li class="grid grid-cols-2 justify-between  hover:bg-gray-200 hover:text-orange cursor-pointer px-7">
+                        <a class="" href="#">Gallery</a>
+                        <div class="relative">
+                            <a class="hidden absolute right-0 top-0" href="#"><i class="fa-solid fa-angle-up"></i></a>
+                            <a class="absolute right-0 top-0" href="#"><i class="fa-solid fa-angle-down"></i></a>
+                        </div>
+
+                        <ul class="text-base leading-8 bg-white mb-5 col-span-2 rounded-md shadow-md shadow-gray-700 hidden">
+                            <li class="hover:bg-gray-100 pl-5">
+                                <a href="#">Gallery 1</a>
+                            </li>
+                            <li class="hover:bg-gray-100 pl-5">
+                                <a href="#">Gallery 2</a>
+                            </li>
+                            <li class="hover:bg-gray-100 pl-5">
+                                <a href="#">Gallery 3</a>
+                            </li>
+                            <li class="hover:bg-gray-100 pl-5">
+                                <a href="#">Gallery 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hover:bg-gray-200 hover:text-orange cursor-pointer px-7">
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
