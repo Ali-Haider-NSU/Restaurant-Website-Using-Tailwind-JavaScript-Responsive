@@ -27,7 +27,7 @@
 
             </div>
         </div>
-        <div class="grid grid-cols-2 lg:flex px-5 pt-5 lg:justify-between">
+        <div class="grid grid-cols-2 lg:flex px-5 sm:px-10 md:px-16 lg:px-5 pt-5 lg:justify-between">
             <div class="">
                 <h1 class="font-dancing text-white text-4xl tracking-wide">Deli<span class="text-orange">cious</span></h1>
             </div>
@@ -36,15 +36,15 @@
                     <button class="h-9 w-32 bg-orange hover:bg-darkorange text-white rounded-full flex justify-center items-center transition pb-1">Book a table</button>
                 </div>
                 <div class="absolute right-0 top-1/2 transform -translate-y-1/2 lg:hidden">
-                    <div class="cursor-pointer">
+                    <div id="menubar" class="cursor-pointer">
                         <i class="fa-solid fa-bars text-white text-3xl"></i>
                     </div>
-                    <div class="hidden cursor-pointer">
+                    <div id="crossbar" class="hidden cursor-pointer">
                         <i class="fa-solid fa-xmark text-white text-3xl"></i>
                     </div>
                 </div>
             </div>
-            <div class="col-span-2 lg:col-span-1 lg:order-2 pt-3 lg:pt-0  lg:block">
+            <div id="mainul" class="col-span-2 lg:col-span-1 lg:order-2 pt-3 lg:pt-0 hidden lg:block">
                 <ul class="bg-white py-7 lg:py-0 rounded-xl leading-10 text-lg lg:flex lg:justify-center lg:gap-x-5 xl:gap-x-10 xxl:gap-x-12 lg:bg-black">
                     <li class="nav-link text-orange">
                         <a href="#">Home</a>
@@ -64,11 +64,11 @@
                     <li id="gallery" class="grid grid-cols-2 justify-between lg:flex hover:bg-gray-200 lg:hover:bg-black  cursor-pointer px-7 lg:px-0  relative ">
                         <a class="lg:text-white gallink" href="#">Gallery</a>
                         <div class="relative lg:text-white lg:w-5 gallink">
-                            <a class="hidden absolute right-0 top-0" href="#"><i class="fa-solid fa-angle-up"></i></a>
-                            <a class="absolute right-0 top-0" href="#"><i class="fa-solid fa-angle-down"></i></a>
+                            <a id="angleup" class="hidden absolute right-0 top-0" href="#"><i class="fa-solid fa-angle-up"></i></a>
+                            <a id="angledown" class="absolute right-0 top-0" href="#"><i class="fa-solid fa-angle-down"></i></a>
                         </div>
 
-                        <ul class="text-base leading-8 bg-white mb-5 col-span-2 lg:w-40 xl:w-[177px] xxl:w-[184px] rounded-md shadow-md shadow-gray-700 hidden lg:absolute top-10 left-0 ">
+                        <ul id="sub-ul" class="text-base leading-8 bg-white mb-5 col-span-2 lg:w-40 xl:w-[177px] xxl:w-[184px] rounded-md shadow-md shadow-gray-700 hidden lg:absolute top-10 left-0 ">
                             <li class="gallery-ul">
                                 <a href="#">Gallery 1</a>
                             </li>
