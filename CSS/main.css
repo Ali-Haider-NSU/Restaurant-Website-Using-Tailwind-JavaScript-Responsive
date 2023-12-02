@@ -3,6 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.bg-custom {
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* 100% of the viewport height */
+  }
+
 @layer components{
     .nav-link{
         @apply hover:bg-gray-200 lg:hover:bg-black hover:text-orange cursor-pointer px-7 lg:px-0 lg:text-white
@@ -11,4 +18,9 @@
     .gallery-ul{
         @apply hover:bg-gray-100 pl-5 hover:text-orange;
     }
+
+    .image-container{
+        transform: translateX(0%);
+        transition: transform 1.5s ease-in-out;
+       }
 }

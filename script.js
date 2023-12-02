@@ -16,6 +16,7 @@ gallery.addEventListener('mouseover', () => {
     gallink[1].style.color = '#FFB03B'
     if (window.innerWidth >= 1000) {
         subul.style.display = 'block';
+
     }
 })
 gallery.addEventListener('mouseout', () => {
@@ -67,3 +68,48 @@ angleup.addEventListener('click', () => {
     angleup.style.display = 'none'
     angledown.style.display = 'block'
 })
+
+
+// Background Slide with time interval
+
+let slidecontainer = document.getElementById('slide-container');
+//let leftbtn = document.getElementById('leftbtn');
+//let rightbtn = document.getElementById('rightbtn');
+let singlediv = document.querySelectorAll('#slide-container  .slide-img');
+
+
+
+let index = 0;
+let interval = setInterval(run, 2500)
+
+function run() {
+    index++;
+    changeSlide()
+}
+
+function changeSlide() {
+    if (index > singlediv.length - 1) {
+        index = 0;
+    } else if (index < 0) {
+        index = singlediv.length - 1;
+    }
+    let value = -(index * 100);
+    slidecontainer.style.transform = `translateX(${value}%)`;
+}
+
+function resetInterval() {
+    clearInterval(interval)
+    interval = setInterval(run, 2500)
+}
+
+// rightbtn.addEventListener('click', () => {
+//     index++;
+//     changeSlide()
+//     resetInterval()
+// })
+
+// leftbtn.addEventListener('click', () => {
+//     index--;
+//     changeSlide()
+//     resetInterval()
+// })

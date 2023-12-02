@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <nav class="bg-black py-14">
+    <nav class="bg-black py-10 sticky top-0 z-50">
         <div class="lg:flex justify-center gap-x-10">
             <div class="flex items-center gap-x-2 justify-center">
                 <i class="fa-solid fa-mobile-screen-button text-orange"></i>
@@ -68,8 +68,8 @@
                             <a id="angledown" class="absolute right-0 top-0" href="#"><i class="fa-solid fa-angle-down"></i></a>
                         </div>
 
-                        <ul id="sub-ul" class="text-base leading-8 bg-white mb-5 col-span-2 lg:w-40 xl:w-[177px] xxl:w-[184px] rounded-md shadow-md shadow-gray-700 hidden lg:absolute top-10 left-0 ">
-                            <li class="gallery-ul">
+                        <ul id="sub-ul" class="text-base leading-8 bg-white mb-5 col-span-2 lg:w-40 xl:w-[177px] xxl:w-[184px] rounded-md shadow-md shadow-gray-700 hidden lg:absolute top-10 left-0  z-50">
+                            <li class="gallery-ul rounded-t-md">
                                 <a href="#">Gallery 1</a>
                             </li>
                             <li class="gallery-ul">
@@ -78,7 +78,7 @@
                             <li class="gallery-ul">
                                 <a href="#">Gallery 3</a>
                             </li>
-                            <li class="gallery-ul">
+                            <li class="gallery-ul rounded-b-md">
                                 <a href="#">Gallery 4</a>
                             </li>
                         </ul>
@@ -91,6 +91,84 @@
 
         </div>
     </nav>
+
+
+    <!-- Header Part and Background of First page -->
+
+    <header class="overflow-x-hidden">
+        <div id="slide-container" class="flex image-container ">
+            <div class="slide-img w-full flex-none">
+                <div class="bg-cover bg-top bg-no-repeat h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] xl:h-[600px] xxl:h-[650px] w-screen relative" style="background-image: url('img/bg-img1.jpg');">
+                    <div class="h-full w-full opacity-50 bg-black absolute top-0 left-0"></div>
+                    <div class="absolute h-full w-full">
+                        <div class="mx-10 sm:mx-12 md:mx-20 lg:mx-48 xl:mx-56 xxl:mx- flex items-center justify-center h-full">
+                            <div>
+                                <h1 class="text-white font-dancing text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold"><span class="text-orange">Delicious</span> Restaurant</h1>
+                                <p class="text-white text-lg mt-8 mx-auto text-center">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus
+                                    et tempore modi architecto.</p>
+                                <div class="text-white h-14 w-38  flex justify-center items-center gap-x-5 mt-5 md:mt-7 lg:mt-8 ">
+                                    <button class="border-2 border-orange h-10 w-32 rounded-full pb-1 hover:bg-orange hover:text-white transition duration-[.5s]">OUR MENU</button>
+                                    <button class="border-2 border-orange h-10 w-32 rounded-full pb-1 hover:bg-orange hover:text-white transition duration-[.5s]">BOOK A TABLE</button>
+                                </div>
+
+                                <!-- <div class="h-12 w-12 bg-white  rounded-full opacity-20 relative">
+                                    <div class="w-full h-full text-white  flex justify-center items-center absolute top-0 left-0">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </div>
+                                </div> -->
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="slide-img w-full flex-none">
+                <div class="bg-cover bg-top bg-no-repeat h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] xl:h-[600px] xxl:h-[650px] w-screen relative" style="background-image: url('img/bg-img2.jpg');">
+                    <div class="h-full w-full opacity-50 bg-black absolute top-0 left-0"></div>
+                    <div class="absolute h-full w-full">
+                        <div class="mx-10 sm:mx-12 md:mx-20 lg:mx-48 xl:mx-56 xxl:mx- flex items-center justify-center h-full">
+                            <div>
+                                <h1 class="text-white font-dancing text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold">Lorem<span class="text-orange"> Ipsum </span>Dolor</h1>
+                                <p class="text-white text-lg mt-8 mx-auto text-center">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus
+                                    et tempore modi architecto.</p>
+                                <div class="text-white h-14 w-38  flex justify-center items-center gap-x-5 mt-5 md:mt-7 lg:mt-8 ">
+                                    <button class="border-2 border-orange h-10 w-32 rounded-full pb-1 hover:bg-orange hover:text-white transition duration-[.5s]">OUR MENU</button>
+                                    <button class="border-2 border-orange h-10 w-32 rounded-full pb-1 hover:bg-orange hover:text-white transition duration-[.5s]">BOOK A TABLE</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="slide-img w-full flex-none">
+                <div class="bg-cover bg-top bg-no-repeat h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] xl:h-[600px] xxl:h-[650px] w-screen relative" style="background-image: url('img/bg-img3.jpg');">
+                    <div class="h-full w-full opacity-70 bg-black absolute top-0 left-0"></div>
+                    <div class="absolute h-full w-full">
+                        <div class="mx-10 sm:mx-12 md:mx-20 lg:mx-48 xl:mx-56 xxl:mx- flex items-center justify-center h-full">
+                            <div>
+                                <h1 class="text-white font-dancing text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold">Sequi<span class="text-orange"> eat </span>utetest <span class="text-orange">  food </span> quaerat</h1>
+                                <p class="text-white text-lg mt-8 mx-auto text-center">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus
+                                    et tempore modi architecto.</p>
+                                <div class="text-white h-14 w-38  flex justify-center items-center gap-x-5 mt-5 md:mt-7 lg:mt-8 ">
+                                    <button class="border-2 border-orange h-10 w-32 rounded-full pb-1 hover:bg-orange hover:text-white transition duration-[.5s]">OUR MENU</button>
+                                    <button class="border-2 border-orange h-10 w-32 rounded-full pb-1 hover:bg-orange hover:text-white transition duration-[.5s]">BOOK A TABLE</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
 
 
 
