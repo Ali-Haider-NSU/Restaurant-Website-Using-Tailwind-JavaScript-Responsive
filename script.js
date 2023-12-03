@@ -131,3 +131,24 @@ leftbtn.addEventListener('click', () => {
     changeSlide()
     resetInterval()
 })
+
+// For Promo Video Playing 
+
+let playvideo = document.getElementById('play-video');
+let video = document.getElementById('video');
+let cross = document.getElementById('cross');
+let videopause = document.getElementById('myVideo');
+
+playvideo.addEventListener('click', () => {
+    videopause.play();
+    video.style.opacity = '1';
+    playvideo.style.zIndex = '0'
+    cross.style.display = 'block'
+})
+
+cross.addEventListener('click', () => {
+    videopause.pause();
+    cross.style.display = 'none'
+    video.style.opacity = '0'
+    playvideo.style.zIndex = '10'
+})
