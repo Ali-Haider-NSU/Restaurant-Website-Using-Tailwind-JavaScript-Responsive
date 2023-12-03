@@ -73,11 +73,27 @@ angleup.addEventListener('click', () => {
 // Background Slide with time interval
 
 let slidecontainer = document.getElementById('slide-container');
-//let leftbtn = document.getElementById('leftbtn');
-//let rightbtn = document.getElementById('rightbtn');
 let singlediv = document.querySelectorAll('#slide-container  .slide-img');
+let leftbtn = document.getElementById('leftbtn');
+let rightbtn = document.getElementById('rightbtn');
+let btncolor = document.querySelectorAll('.colorbtn');
 
+// For adding color effect on sliding button
 
+rightbtn.addEventListener('mouseover', () => {
+    btncolor[0].style.opacity = '.5'
+})
+rightbtn.addEventListener('mouseout', () => {
+    btncolor[0].style.opacity = '.3'
+})
+leftbtn.addEventListener('mouseover', () => {
+    btncolor[1].style.opacity = '.5'
+})
+leftbtn.addEventListener('mouseout', () => {
+    btncolor[1].style.opacity = '.3'
+})
+
+// For Automatic Slider with interval
 
 let index = 0;
 let interval = setInterval(run, 2500)
@@ -102,14 +118,16 @@ function resetInterval() {
     interval = setInterval(run, 2500)
 }
 
-// rightbtn.addEventListener('click', () => {
-//     index++;
-//     changeSlide()
-//     resetInterval()
-// })
+// For Clicking Button And Slide Manually
 
-// leftbtn.addEventListener('click', () => {
-//     index--;
-//     changeSlide()
-//     resetInterval()
-// })
+rightbtn.addEventListener('click', () => {
+    index++;
+    changeSlide()
+    resetInterval()
+})
+
+leftbtn.addEventListener('click', () => {
+    index--;
+    changeSlide()
+    resetInterval()
+})

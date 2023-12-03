@@ -11,6 +11,8 @@
   }
 
 @layer components{
+    /* For Navigation Part */
+
     .nav-link{
         @apply hover:bg-gray-200 lg:hover:bg-black hover:text-orange cursor-pointer px-7 lg:px-0 lg:text-white
     }
@@ -19,8 +21,43 @@
         @apply hover:bg-gray-100 pl-5 hover:text-orange;
     }
 
+    /* For Background Slider Part */
+
     .image-container{
         transform: translateX(0%);
         transition: transform 1.5s ease-in-out;
-       }
+    }
+
+    .slide-elements{
+        @apply bg-cover bg-top bg-no-repeat h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] xl:h-[600px] xxl:h-[650px] w-screen relative;
+    }
+
+    .elements-container{
+        @apply mx-10 sm:mx-12 md:mx-20 lg:mx-48 xl:mx-56 xxl:mx-72 flex items-center justify-center h-full;
+    }
+
+    .slider-heading{
+        @apply text-white font-dancing text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold;
+    }
+
+    .bg-btn{
+        @apply text-white flex justify-center items-center gap-x-5 mt-5 md:mt-7 lg:mt-8;
+    }
+
+    .slider-btn{
+        @apply border-2 border-orange h-10 w-32 rounded-full pb-1 hover:bg-orange hover:text-white transition duration-[.5s];
+    }
+
+    .arrow-btn{
+        @apply h-12 w-12  rounded-full absolute top-1/2 transform -translate-y-1/2;
+    }
+
+    .arrow-btn-bg{
+        @apply bg-white w-full h-full rounded-full absolute top-0 left-0 opacity-30;
+    }
+
+    .arrow-btn-icon{
+        @apply w-full h-full rounded-full flex justify-center items-center absolute z-50 cursor-pointer transition;
+    }
+
 }
