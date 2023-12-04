@@ -60,4 +60,26 @@
         @apply w-full h-full rounded-full flex justify-center items-center absolute z-50 cursor-pointer transition;
     }
 
+    /* For Why choose Our Restaurant part */
+
+    .change-col:hover .change{
+        color: white;
+    }
+
+    .chose-parent{
+        @apply w-full h-64 shadow-md shadow-gray-600 px-7 hover:bg-orange transition text-white change-col mt-10;
+    }
+
+    .chose-h1{
+        @apply text-orange text-3xl font-bold pt-8 change;
+    }
+
+    .chose-h2{
+        @apply text-3xl font-dancing font-bold text-[#6C665C] mt-4 change;
+    }
+
+    .chose-p{
+        @apply text-[#AAAAAA] mt-4 change;
+    }
+
 }
