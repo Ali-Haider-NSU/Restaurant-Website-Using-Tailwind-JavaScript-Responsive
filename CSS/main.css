@@ -3,12 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg-custom {
-    background-image: url('');
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* 100% of the viewport height */
-  }
 
 @layer components{
     /* For Navigation Part */
@@ -97,7 +91,7 @@
     }
 
     .tasty-p{
-        @apply font-bold z-20 bg-white px-1 pt-1 text-xl;
+        @apply font-bold z-20 bg-white px-1 pt-1 text-xl text-[#444444];
     }
 
     .tasty-p1{
@@ -106,6 +100,37 @@
 
     .tasty-p2{
         @apply text-gray-400 pl-1 italic;
+    }
+
+
+    /* Check Our Special Section */
+
+    .special-list{
+        @apply h-14 flex items-center font-bold text-[#433F39] hover:text-orange pl-5 pb-1 cursor-pointer transition;
+    }
+
+    .special-img-container{
+        @apply mx-10 sm:mx-28 lg:mx-0  order-2 lg:w-[40%] xl:mr-3;
+    }
+
+    .special-img{
+        @apply h-[350px] sm:h-[380px] md:h-[420px] lg:h-[256px] mx-auto xl:h-[310px];
+    }
+
+    .special-element-parent{
+        @apply mt-5 mx-10 sm:mx-14 md:mx-20 lg:ml-10 lg:mr-0 lg:w-[60%];
+    }
+
+    .special-h1{
+        @apply text-3xl font-dancing text-[#433F39] ;
+    }
+
+    .special-p1{
+        @apply text-[#777777] italic text-lg mt-5;
+    }
+
+    .special-p2{
+        @apply text-[#777777] text-lg mt-3;
     }
 
 }

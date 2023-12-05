@@ -152,3 +152,177 @@ cross.addEventListener('click', () => {
     video.style.opacity = '0'
     playvideo.style.zIndex = '10'
 })
+
+
+// Check Our Special Section
+
+let special1 = document.getElementById('special1');
+let special2 = document.getElementById('special2');
+let special3 = document.getElementById('special3');
+let special4 = document.getElementById('special4');
+let special5 = document.getElementById('special5');
+
+let dish1 = document.getElementById('dish1');
+let dish2 = document.getElementById('dish2');
+let dish3 = document.getElementById('dish3');
+let dish4 = document.getElementById('dish4');
+let dish5 = document.getElementById('dish5');
+
+let special = document.querySelectorAll('.special');
+let dish = document.querySelectorAll('.dish');
+
+function setInitial() {
+    if (window.innerWidth < 1000) {
+        special1.click();
+    } else {
+        special1.click();
+    }
+}
+window.addEventListener('resize', setInitial);
+setInitial();
+
+special1.addEventListener('click', () => {
+    if (window.innerWidth < 1000) {
+        special1.style.backgroundColor = '#FFB03B'
+        dish1.style.display = 'block';
+        special[0].style.borderRight = ''
+        special[0].style.color = '#FFFFFF'
+        for (var i = 0; i < special.length; i++) {
+            if (i == 0) {} else {
+                special[i].style.borderRight = ''
+                dish[i].style.dish = 'none'
+                special[i].style.backgroundColor = '#FFFFFF'
+                special[i].style.color = '#433F39'
+            }
+        }
+    } else {
+        special1.style.backgroundColor = '#FFFFFF'
+        special1.style.color = '#FFB03B'
+        special[0].style.borderRight = '3px solid #FFB03B'
+        dish1.style.display = 'block'
+        for (var i = 0; i < special.length; i++) {
+            if (i == 0) {} else {
+                special[i].style.borderRight = '2px solid #E5E7EB'
+                dish[i].style.display = 'none'
+                special[i].style.backgroundColor = '#FFFFFF'
+                special[i].style.color = '#433F39'
+            }
+        }
+    }
+})
+
+special2.addEventListener('click', () => {
+    if (window.innerWidth < 1000) {
+        special2.style.backgroundColor = '#FFB03B'
+        dish2.style.display = 'block';
+        special[1].style.borderRight = ''
+        special[1].style.color = '#FFFFFF'
+        for (var i = 0; i < special.length; i++) {
+            if (i == 1) {} else {
+                special[i].style.borderRight = ''
+                dish[i].style.display = 'none'
+                special[i].style.backgroundColor = '#FFFFFF'
+                special[i].style.color = '#433F39'
+            }
+        }
+    } else {
+        special2.style.color = '#FFB03B'
+        special[1].style.borderRight = '3px solid #FFB03B'
+        dish2.style.display = 'block'
+        for (var i = 0; i < special.length; i++) {
+            if (i == 1) {} else {
+                special[i].style.borderRight = '2px solid #E5E7EB'
+                dish[i].style.display = 'none'
+                special[i].style.backgroundColor = '#FFFFFF'
+                special[i].style.color = '#433F39'
+            }
+        }
+    }
+})
+
+special3.addEventListener('click', () => {
+    if (window.innerWidth < 1000) {
+        special3.style.backgroundColor = '#FFB03B'
+        dish3.style.display = 'block';
+        special[2].style.borderRight = ''
+        special[2].style.color = '#FFFFFF'
+        for (var i = 0; i < special.length; i++) {
+            if (i == 2) {} else {
+                special[i].style.borderRight = ''
+                dish[i].style.display = 'none'
+                special[i].style.backgroundColor = '#FFFFFF'
+                special[i].style.color = '#433F39'
+            }
+        }
+    } else {
+        special3.style.color = '#FFB03B'
+        special[2].style.borderRight = '3px solid #FFB03B'
+        dish3.style.display = 'block'
+        for (var i = 0; i < special.length; i++) {
+            if (i == 2) {} else {
+                special[i].style.borderRight = '2px solid #E5E7EB'
+                dish[i].style.display = 'none'
+                special[i].style.backgroundColor = '#FFFFFF'
+                special[i].style.color = '#433F39'
+            }
+        }
+    }
+})
+
+special4.addEventListener('click', () => {
+    if (window.innerWidth < 1000) {
+        special4.style.backgroundColor = '#FFB03B'
+        dish4.style.display = 'block';
+        special[3].style.borderRight = ''
+        special[3].style.color = '#FFFFFF'
+        for (var i = 0; i < special.length; i++) {
+            if (i == 3) {} else {
+                special[i].style.borderRight = ''
+                dish[i].style.display = 'none'
+                special[i].style.backgroundColor = '#FFFFFF'
+                special[i].style.color = '#433F39'
+            }
+        }
+    } else {
+        special4.style.color = '#FFB03B'
+        special[3].style.borderRight = '3px solid #FFB03B'
+        dish4.style.display = 'block'
+        for (var i = 0; i < special.length; i++) {
+            if (i == 3) {} else {
+                special[i].style.borderRight = '2px solid #E5E7EB'
+                dish[i].style.display = 'none'
+                special[i].style.backgroundColor = '#FFFFFF'
+                special[i].style.color = '#433F39'
+            }
+        }
+    }
+})
+
+special5.addEventListener('click', () => {
+    if (window.innerWidth < 1000) {
+        special5.style.backgroundColor = '#FFB03B'
+        dish5.style.display = 'block';
+        special[4].style.borderRight = ''
+        special[4].style.color = '#FFFFFF'
+        for (var i = 0; i < special.length; i++) {
+            if (i == 4) {} else {
+                special[i].style.borderRight = ''
+                dish[i].style.display = 'none'
+                special[i].style.backgroundColor = '#FFFFFF'
+                special[i].style.color = '#433F39'
+            }
+        }
+    } else {
+        special5.style.color = '#FFB03B'
+        special[4].style.borderRight = '3px solid #FFB03B'
+        dish5.style.display = 'block'
+        for (var i = 0; i < special.length; i++) {
+            if (i == 4) {} else {
+                special[i].style.borderRight = '2px solid #E5E7EB'
+                dish[i].style.display = 'none'
+                special[i].style.backgroundColor = '#FFFFFF'
+                special[i].style.color = '#433F39'
+            }
+        }
+    }
+})
