@@ -133,4 +133,27 @@
         @apply text-[#777777] text-lg mt-3;
     }
 
+    /* Organize Your Events in our Restaurant */
+
+    .underline-color{
+        text-decoration-color: #FF9B08;
+    }
+
+    .event-container{
+        @apply px-7 sm:px-12 md:px-20 lg:px-7 xl:px-14 xxl:px-28 lg:flex gap-x-10 items-center;
+    }
+
+    .event-h1{
+        @apply font-dancing text-orange text-3xl;
+    }
+
+    .event-h2{
+        @apply text-3xl font-bold text-white underline underline-offset-8 underline-color pt-3;
+    }
+
+    .event-icn-container{
+        @apply flex items-center gap-x-3
+    }
+    
+   
 }

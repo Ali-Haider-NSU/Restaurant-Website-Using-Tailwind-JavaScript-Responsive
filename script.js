@@ -326,3 +326,76 @@ special5.addEventListener('click', () => {
         }
     }
 })
+
+// Organize Your Events in our Restaurant
+
+let eventparent = document.getElementById('event-parent');
+let singleevent = document.querySelectorAll('.event');
+let roundbtn = document.querySelectorAll('.round-icn');
+
+var indx = 0;
+let intrval = setInterval(runn, 3000)
+
+function runn() {
+    indx++;
+    changeSlides()
+    if (indx == 0) {
+        roundbtn[indx].style.color = '#FFB03B'
+        roundbtn[1].style.color = '#FFFFFF'
+        roundbtn[2].style.color = '#FFFFFF'
+    } else if (indx == 1) {
+        roundbtn[indx].style.color = '#FFB03B'
+        roundbtn[0].style.color = '#FFFFFF'
+        roundbtn[2].style.color = '#FFFFFF'
+    } else {
+        roundbtn[indx].style.color = '#FFB03B'
+        roundbtn[0].style.color = '#FFFFFF'
+        roundbtn[1].style.color = '#FFFFFF'
+    }
+
+
+}
+
+function changeSlides() {
+    if (indx > singleevent.length - 1) {
+        indx = 0;
+    } else if (indx < 0) {
+        indx = singleevent.length - 1;
+    }
+    let value = -(indx * 100);
+    eventparent.style.transform = `translateX(${value}%)`;
+}
+
+function resetInterval() {
+    clearInterval(intrval)
+    intrval = setInterval(runn, 3000)
+}
+
+// For changing slides by clicking rounded button
+
+roundbtn[0].addEventListener('click', () => {
+    indx = 0;
+    roundbtn[indx].style.color = '#FFB03B'
+    roundbtn[1].style.color = '#FFFFFF'
+    roundbtn[2].style.color = '#FFFFFF'
+    changeSlides()
+    resetInterval()
+})
+
+roundbtn[1].addEventListener('click', () => {
+    indx = 1;
+    roundbtn[indx].style.color = '#FFB03B'
+    roundbtn[0].style.color = '#FFFFFF'
+    roundbtn[2].style.color = '#FFFFFF'
+    changeSlides()
+    resetInterval()
+})
+
+roundbtn[2].addEventListener('click', () => {
+    indx = 2;
+    roundbtn[indx].style.color = '#FFB03B'
+    roundbtn[0].style.color = '#FFFFFF'
+    roundbtn[1].style.color = '#FFFFFF'
+    changeSlides()
+    resetInterval()
+})
