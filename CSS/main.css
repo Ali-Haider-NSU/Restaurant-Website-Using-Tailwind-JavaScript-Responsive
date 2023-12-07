@@ -160,5 +160,17 @@
     .book-input{
         @apply h-12 border border-gray-300 pl-3 w-full;
     }
+
+    /* Some Photos From Our Restaurant Section */
+
+    .photo-galery:hover{
+        transform: scale(1.1);
+        transition: .5s ease-out;
+        cursor: pointer;
+    }
+    .photo-galery:not(:hover){
+        transform: scale(1);
+        transition: .3s ease-in;
+    }
    
 }
