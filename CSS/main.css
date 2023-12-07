@@ -172,5 +172,24 @@
         transform: scale(1);
         transition: .3s ease-in;
     }
+
+    /* Our Proffesional Chefs section */
+    
+    .card-parent{
+        @apply relative w-[90%] sm:w-[80%] md:w-full mx-auto border-4 max-w-[480px] md:max-w-[370px];
+    }
+
+    .cart-container{
+        @apply bg-white h-36 text-[#7A7368] py-5 w-[90%] left-1/2 transform -translate-x-1/2 absolute -bottom-20
+    }
+
+    .card-h1{
+        @apply underline underline-color underline-offset-8 text-center text-xl font-bold;
+    }
+
+    .card-icn-parent{
+        @apply flex justify-center gap-x-3 mt-3 text-xl;
+    }
+    
    
 }
