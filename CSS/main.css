@@ -155,5 +155,10 @@
         @apply flex items-center gap-x-3
     }
     
+    /* Book a Table Section */
+
+    .book-input{
+        @apply h-12 border border-gray-300 pl-3 w-full;
+    }
    
 }
