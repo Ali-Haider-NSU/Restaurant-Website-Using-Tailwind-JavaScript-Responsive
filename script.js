@@ -71,66 +71,67 @@ angleup.addEventListener('click', () => {
 
 
 // Background Slide with time interval
+{
+    let slidecontainer = document.getElementById('slide-container');
+    let singlediv = document.querySelectorAll('#slide-container  .slide-img');
+    let leftbtn = document.getElementById('leftbtn');
+    let rightbtn = document.getElementById('rightbtn');
+    let btncolor = document.querySelectorAll('.colorbtn');
 
-let slidecontainer = document.getElementById('slide-container');
-let singlediv = document.querySelectorAll('#slide-container  .slide-img');
-let leftbtn = document.getElementById('leftbtn');
-let rightbtn = document.getElementById('rightbtn');
-let btncolor = document.querySelectorAll('.colorbtn');
+    // For adding color effect on sliding button
 
-// For adding color effect on sliding button
+    rightbtn.addEventListener('mouseover', () => {
+        btncolor[0].style.opacity = '.5'
+    })
+    rightbtn.addEventListener('mouseout', () => {
+        btncolor[0].style.opacity = '.3'
+    })
+    leftbtn.addEventListener('mouseover', () => {
+        btncolor[1].style.opacity = '.5'
+    })
+    leftbtn.addEventListener('mouseout', () => {
+        btncolor[1].style.opacity = '.3'
+    })
 
-rightbtn.addEventListener('mouseover', () => {
-    btncolor[0].style.opacity = '.5'
-})
-rightbtn.addEventListener('mouseout', () => {
-    btncolor[0].style.opacity = '.3'
-})
-leftbtn.addEventListener('mouseover', () => {
-    btncolor[1].style.opacity = '.5'
-})
-leftbtn.addEventListener('mouseout', () => {
-    btncolor[1].style.opacity = '.3'
-})
+    // For Automatic Slider with interval
 
-// For Automatic Slider with interval
+    let index = 0;
+    let interval = setInterval(run, 2500)
 
-let index = 0;
-let interval = setInterval(run, 2500)
-
-function run() {
-    index++;
-    changeSlide()
-}
-
-function changeSlide() {
-    if (index > singlediv.length - 1) {
-        index = 0;
-    } else if (index < 0) {
-        index = singlediv.length - 1;
+    function run() {
+        index++;
+        changeSlide()
     }
-    let value = -(index * 100);
-    slidecontainer.style.transform = `translateX(${value}%)`;
+
+    function changeSlide() {
+        if (index > singlediv.length - 1) {
+            index = 0;
+        } else if (index < 0) {
+            index = singlediv.length - 1;
+        }
+        let value = -(index * 100);
+        slidecontainer.style.transform = `translateX(${value}%)`;
+    }
+
+    function resetInterval() {
+        clearInterval(interval)
+        interval = setInterval(run, 2500)
+    }
+
+    // For Clicking Button And Slide Manually
+
+    rightbtn.addEventListener('click', () => {
+        index++;
+        changeSlide()
+        resetInterval()
+    })
+
+    leftbtn.addEventListener('click', () => {
+        index--;
+        changeSlide()
+        resetInterval()
+    })
 }
-
-function resetInterval() {
-    clearInterval(interval)
-    interval = setInterval(run, 2500)
-}
-
-// For Clicking Button And Slide Manually
-
-rightbtn.addEventListener('click', () => {
-    index++;
-    changeSlide()
-    resetInterval()
-})
-
-leftbtn.addEventListener('click', () => {
-    index--;
-    changeSlide()
-    resetInterval()
-})
 
 // For Promo Video Playing 
 
@@ -328,74 +329,195 @@ special5.addEventListener('click', () => {
 })
 
 // Organize Your Events in our Restaurant
+{
+    let eventparent = document.getElementById('event-parent');
+    let singleevent = document.querySelectorAll('.event');
+    let roundbtn = document.querySelectorAll('.round-icn');
 
-let eventparent = document.getElementById('event-parent');
-let singleevent = document.querySelectorAll('.event');
-let roundbtn = document.querySelectorAll('.round-icn');
+    var indx = 0;
+    let intrval = setInterval(runn, 3000)
 
-var indx = 0;
-let intrval = setInterval(runn, 3000)
+    function runn() {
+        indx++;
+        changeSlides()
+        if (indx == 0) {
+            roundbtn[indx].style.color = '#FFB03B'
+            roundbtn[1].style.color = '#FFFFFF'
+            roundbtn[2].style.color = '#FFFFFF'
+        } else if (indx == 1) {
+            roundbtn[indx].style.color = '#FFB03B'
+            roundbtn[0].style.color = '#FFFFFF'
+            roundbtn[2].style.color = '#FFFFFF'
+        } else {
+            roundbtn[indx].style.color = '#FFB03B'
+            roundbtn[0].style.color = '#FFFFFF'
+            roundbtn[1].style.color = '#FFFFFF'
+        }
 
-function runn() {
-    indx++;
-    changeSlides()
-    if (indx == 0) {
-        roundbtn[indx].style.color = '#FFB03B'
-        roundbtn[1].style.color = '#FFFFFF'
-        roundbtn[2].style.color = '#FFFFFF'
-    } else if (indx == 1) {
-        roundbtn[indx].style.color = '#FFB03B'
-        roundbtn[0].style.color = '#FFFFFF'
-        roundbtn[2].style.color = '#FFFFFF'
-    } else {
-        roundbtn[indx].style.color = '#FFB03B'
-        roundbtn[0].style.color = '#FFFFFF'
-        roundbtn[1].style.color = '#FFFFFF'
+
     }
 
+    function changeSlides() {
+        if (indx > singleevent.length - 1) {
+            indx = 0;
+        } else if (indx < 0) {
+            indx = singleevent.length - 1;
+        }
+        let value = -(indx * 100);
+        eventparent.style.transform = `translateX(${value}%)`;
+    }
 
-}
+    function resetInterval() {
+        clearInterval(intrval)
+        intrval = setInterval(runn, 3000)
+    }
 
-function changeSlides() {
-    if (indx > singleevent.length - 1) {
+    // For changing slides by clicking rounded button
+
+    roundbtn[0].addEventListener('click', () => {
         indx = 0;
-    } else if (indx < 0) {
-        indx = singleevent.length - 1;
+        roundbtn[indx].style.color = '#FFB03B'
+        roundbtn[1].style.color = '#FFFFFF'
+        roundbtn[2].style.color = '#FFFFFF'
+        changeSlides()
+        resetInterval()
+    })
+
+    roundbtn[1].addEventListener('click', () => {
+        indx = 1;
+        roundbtn[indx].style.color = '#FFB03B'
+        roundbtn[0].style.color = '#FFFFFF'
+        roundbtn[2].style.color = '#FFFFFF'
+        changeSlides()
+        resetInterval()
+    })
+
+    roundbtn[2].addEventListener('click', () => {
+        indx = 2;
+        roundbtn[indx].style.color = '#FFB03B'
+        roundbtn[0].style.color = '#FFFFFF'
+        roundbtn[1].style.color = '#FFFFFF'
+        changeSlides()
+        resetInterval()
+    })
+}
+
+// Testimonial Section
+{
+    let testimonial = document.getElementById('testimonial-parent');
+    let singltesti = document.querySelectorAll('.testimonial');
+    let circlebtn = document.querySelectorAll('.testimonial-icn');
+
+    var indexs = 0;
+    let delay = setInterval(running, 3000)
+
+    function running() {
+        indexs++;
+        changesSlides()
+        if (indexs == 0) {
+            circlebtn[indexs].style.color = '#FFB03B'
+            circlebtn[1].style.color = '#FFFFFF'
+            circlebtn[2].style.color = '#FFFFFF'
+            circlebtn[3].style.color = '#FFFFFF'
+            circlebtn[4].style.color = '#FFFFFF'
+        } else if (indexs == 1) {
+            circlebtn[indexs].style.color = '#FFB03B'
+            circlebtn[0].style.color = '#FFFFFF'
+            circlebtn[2].style.color = '#FFFFFF'
+            circlebtn[3].style.color = '#FFFFFF'
+            circlebtn[4].style.color = '#FFFFFF'
+        } else if (indexs == 2) {
+            circlebtn[indexs].style.color = '#FFB03B'
+            circlebtn[0].style.color = '#FFFFFF'
+            circlebtn[1].style.color = '#FFFFFF'
+            circlebtn[3].style.color = '#FFFFFF'
+            circlebtn[4].style.color = '#FFFFFF'
+        } else if (indexs == 3) {
+            circlebtn[indexs].style.color = '#FFB03B'
+            circlebtn[0].style.color = '#FFFFFF'
+            circlebtn[1].style.color = '#FFFFFF'
+            circlebtn[2].style.color = '#FFFFFF'
+            circlebtn[4].style.color = '#FFFFFF'
+        } else if (indexs == 4) {
+            circlebtn[indexs].style.color = '#FFB03B'
+            circlebtn[0].style.color = '#FFFFFF'
+            circlebtn[1].style.color = '#FFFFFF'
+            circlebtn[2].style.color = '#FFFFFF'
+            circlebtn[3].style.color = '#FFFFFF'
+        }
+
+
     }
-    let value = -(indx * 100);
-    eventparent.style.transform = `translateX(${value}%)`;
+
+    function changesSlides() {
+        if (indexs > singltesti.length - 1) {
+            indexs = 0;
+        } else if (indexs < 0) {
+            indexs = singltesti.length - 1;
+        }
+        let value = -(indexs * 100);
+        testimonial.style.transform = `translateX(${value}%)`;
+    }
+
+    function resetInterval() {
+        clearInterval(delay)
+        delay = setInterval(running, 3000)
+    }
+
+    // For changing slides by clicking rounded button
+
+    circlebtn[0].addEventListener('click', () => {
+        indexs = 0;
+        circlebtn[0].style.color = '#FFB03B'
+        circlebtn[1].style.color = '#FFFFFF'
+        circlebtn[2].style.color = '#FFFFFF'
+        circlebtn[3].style.color = '#FFFFFF'
+        circlebtn[4].style.color = '#FFFFFF'
+        changesSlides()
+        resetInterval()
+    })
+
+    circlebtn[1].addEventListener('click', () => {
+        indexs = 1;
+        circlebtn[1].style.color = '#FFB03B'
+        circlebtn[0].style.color = '#FFFFFF'
+        circlebtn[2].style.color = '#FFFFFF'
+        circlebtn[3].style.color = '#FFFFFF'
+        circlebtn[4].style.color = '#FFFFFF'
+        changesSlides()
+        resetInterval()
+    })
+
+    circlebtn[2].addEventListener('click', () => {
+        indexs = 2;
+        circlebtn[2].style.color = '#FFB03B'
+        circlebtn[0].style.color = '#FFFFFF'
+        circlebtn[1].style.color = '#FFFFFF'
+        circlebtn[3].style.color = '#FFFFFF'
+        circlebtn[4].style.color = '#FFFFFF'
+        changesSlides()
+        resetInterval()
+    })
+
+    circlebtn[3].addEventListener('click', () => {
+        indexs = 3;
+        circlebtn[3].style.color = '#FFB03B'
+        circlebtn[0].style.color = '#FFFFFF'
+        circlebtn[1].style.color = '#FFFFFF'
+        circlebtn[2].style.color = '#FFFFFF'
+        circlebtn[4].style.color = '#FFFFFF'
+        changesSlides()
+        resetInterval()
+    })
+
+    circlebtn[4].addEventListener('click', () => {
+        indexs = 4;
+        circlebtn[4].style.color = '#FFB03B'
+        circlebtn[0].style.color = '#FFFFFF'
+        circlebtn[1].style.color = '#FFFFFF'
+        circlebtn[2].style.color = '#FFFFFF'
+        circlebtn[3].style.color = '#FFFFFF'
+        changesSlides()
+        resetInterval()
+    })
 }
-
-function resetInterval() {
-    clearInterval(intrval)
-    intrval = setInterval(runn, 3000)
-}
-
-// For changing slides by clicking rounded button
-
-roundbtn[0].addEventListener('click', () => {
-    indx = 0;
-    roundbtn[indx].style.color = '#FFB03B'
-    roundbtn[1].style.color = '#FFFFFF'
-    roundbtn[2].style.color = '#FFFFFF'
-    changeSlides()
-    resetInterval()
-})
-
-roundbtn[1].addEventListener('click', () => {
-    indx = 1;
-    roundbtn[indx].style.color = '#FFB03B'
-    roundbtn[0].style.color = '#FFFFFF'
-    roundbtn[2].style.color = '#FFFFFF'
-    changeSlides()
-    resetInterval()
-})
-
-roundbtn[2].addEventListener('click', () => {
-    indx = 2;
-    roundbtn[indx].style.color = '#FFB03B'
-    roundbtn[0].style.color = '#FFFFFF'
-    roundbtn[1].style.color = '#FFFFFF'
-    changeSlides()
-    resetInterval()
-})
