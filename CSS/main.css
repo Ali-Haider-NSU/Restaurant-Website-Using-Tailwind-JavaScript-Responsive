@@ -222,4 +222,20 @@
     .testimonial-p1{
         @apply text-white text-lg text-center mx-10 sm:w-[550px] sm:mx-auto;
     }
+
+    /* Contact With Us Section */
+
+    .contact-icn{
+        @apply flex justify-center items-center bg-[#f9ecd6] h-10 w-10 rounded-full hover:bg-orange hover:text-white transition text-darkorange cursor-pointer;
+    }
+
+    .contact-h1{
+        @apply text-xl font-bold text-[#433F39] -mt-1
+    }
+
+    /* Footer Part */
+
+    .footer-icn{
+       @apply h-10 w-10 rounded-full flex justify-center items-center bg-[#46423B] hover:bg-orange transition text-white cursor-pointer;
+    }
 }
